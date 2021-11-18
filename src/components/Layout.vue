@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Navigation from './components-layout/Navigation.vue'
-import Foot from "./components-layout/Foot.vue";
+import Navigation from './Navigation.vue'
+import Foot from "./Foot.vue";
 
 export default {
   name: "layout",
