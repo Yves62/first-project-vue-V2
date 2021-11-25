@@ -22,12 +22,12 @@ const routes = [
         component: Accueil
     },
     {
-        path: '/page2',
+        path: '/boutique',
         name: 'Boutique',
         component: Boutique
     },
     {
-        path: '/page3',
+        path: '/contact',
         name: 'Pcontact',
         component: PContact
     }

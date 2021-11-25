@@ -3,8 +3,8 @@
     <nav>
       <ul>
         <li><router-link to="/" exact>Accueil</router-link></li>
-        <li><router-link to="/page2">Boutique</router-link></li>
-        <li><router-link to="/page3">Contact</router-link></li>
+        <li><router-link to="/boutique">Boutique</router-link></li>
+        <li><router-link to="/contact">Contact</router-link></li>
       </ul>
     </nav>
     
