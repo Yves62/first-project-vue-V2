@@ -11,13 +11,10 @@ import Foot from "./Foot.vue";
 
 export default {
   name: "layout",
-  data() {
-    return {};
-  },
   components: {
-    'foot': Foot,
-    'navigation': Navigation
-  },
+    Foot,
+    Navigation
+  }
 };
 </script>
 

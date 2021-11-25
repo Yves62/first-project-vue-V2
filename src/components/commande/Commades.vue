@@ -16,13 +16,8 @@ import ChoixCommandes from "./ChoixCommandes.vue";
 
 export default {
   name: "commandes",
-  data() {
-    return {
-      
-    };
-  },
   components: {
-    "choix-commandes": ChoixCommandes,
+    ChoixCommandes
   },
 };
 </script>

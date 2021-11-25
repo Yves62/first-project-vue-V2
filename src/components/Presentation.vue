@@ -22,7 +22,7 @@ export default {
       idP2: "p2",
       enTete: true
     };
-  },
+  }
 };
 </script>
 

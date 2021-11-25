@@ -21,12 +21,9 @@ import BlocHead from "./BlocHead.vue";
 
 export default {
   name: "navigation",
-  data() {
-    return {};
-  },
   components: {
-    blocHead: BlocHead,
-  },
+    BlocHead
+  }
 };
 </script>
 

@@ -2,24 +2,25 @@
   <div>
 
   <div class="container-commades-aromes">
+   
     <div class="commandes">
-      <p>{{ vanille }}</p>
-      <button class="btn" @click="riseVan">Plus</button>
-      <button class="btn" @click="descVan">Moins</button>
+      <p>Vanille</p>
+      <button class="btn" @click="totalVanille++">Plus</button>
+      <button class="btn" @click="totalVanille--" :disabled="checkqt(totalVanille)">Moins</button>
       <p>{{ totalVanille }}</p>
     </div>
 
     <div class="commandes">
-      <p>{{ noisette }}</p>
-      <button class="btn" @click="riseNoi">Plus</button>
-      <button class="btn" @click="descNoi">Moins</button>
+      <p>Noisette</p>
+      <button class="btn" @click="totalNoisette++">Plus</button>
+      <button class="btn" @click="totalNoisette--" :disabled="checkqt(totalNoisette)" >Moins</button>
       <p>{{ totalNoisette }}</p>
     </div>
 
     <div class="commandes">
-      <p>{{ caramel }}</p>
-      <button class="btn" @click="riseCar">Plus</button>
-      <button class="btn" @click="descCar">Moins</button>
+      <p>Caramel</p>
+      <button class="btn" @click="totalCaramel++">Plus</button>
+      <button class="btn" @click="totalCaramel--" :disabled="checkqt(totalCaramel)">Moins</button>
       <p>{{ totalCaramel }}</p>
     </div>
   </div>
@@ -36,9 +37,6 @@ export default {
   name: "choix-commandes",
   data() {
     return {
-      vanille: "Vanille",
-      noisette: "Noisette",
-      caramel: "Caramel",
       totalVanille: 0,
       totalNoisette: 0,
       totalCaramel: 0,
@@ -46,44 +44,12 @@ export default {
     }
   },
   methods: {
-    riseVan() {
-      this.totalVanille++;
-    },
-    descVan() {
-      this.totalVanille--;
-    },
-    riseNoi() {
-      this.totalNoisette++;
-    },
-    descNoi() {
-      this.totalNoisette--;
-    },
-    riseCar() {
-      this.totalCaramel++;
-    },
-    descCar() {
-      this.totalCaramel--;
-    },
     totalEl(){
       return this.total = this.totalVanille + this.totalNoisette + this.totalCaramel;
+    },
+    checkqt(order){
+      return order === 0 ? true : false;
     }
-  },
-  watch : {
-    totalCaramel(){
-      if(this.totalCaramel <= 0){
-        this.totalCaramel = 0;
-      }
-    },
-    totalVanille(){
-      if(this.totalVanille <= 0){
-        this.totalVanille = 0;
-      }
-    },
-    totalNoisette(){
-      if(this.totalNoisette <= 0){
-        this.totalNoisette = 0;
-      }
-    },
   }
 };
 </script>
